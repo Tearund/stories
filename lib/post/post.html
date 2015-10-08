@@ -1,0 +1,18 @@
+<ion-view>
+    <ion-nav-title>{{postCtrl.post[0].title.rendered}}</ion-nav-title>
+    <ion-content>
+        <ion-spinner ng-if="!postCtrl.post"></ion-spinner>
+        <div class="list card" ng-if="postCtrl.post" style="margin: 0;">
+            <div class="item item-body">
+                <img class="full-image" ng-src="{{::postCtrl.post.featured_image.attachment_meta.sizes.medium.url}}">
+                 <div ng-repeat='page in postCtrl.post[0]._jc_stories'>
+                    <div class="page page-{{ $index }}" ng-style="{'background-image':'url({{page.page_image}})'}">
+                    {{page.page_text}}
+                    {{page}}
+                    <div ng-click="nextPage($index)" class="next-page">NEXT PAGE</div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

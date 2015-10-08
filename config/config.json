@@ -1,0 +1,16 @@
+{
+    "api": {
+        "baseUrl": "http://localhost:8888/tf-stories-wp/wp-json/wp/v2/",
+        "timeout": 20000
+    },
+    "posts": {
+        "posts_per_page": 6,
+        "orderby": "date",
+        "orderby": "desc",
+        "post_status": "publish"
+    },
+    "cache": {
+        "views": 10,
+        "forward": false
+    }
+}
